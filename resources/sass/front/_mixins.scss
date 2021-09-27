@@ -1,0 +1,19 @@
+@mixin flex-center ($axis: 'both') {
+    display: flex;
+
+    @if $axis == 'both' {
+        justify-content: center;
+        align-items: center;
+    } @else if $axis == 'main' {
+        justify-content: center;
+    } @else if $axis == 'cross' {
+        align-items: center;
+    }
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
