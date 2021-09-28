@@ -46,3 +46,140 @@ button {
   font-weight: 700;
 }
 
+.home,
+.show {
+  height: 100%;
+}
+
+.home .main-top,
+.show .main-top {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  height: 50%;
+}
+
+.home .main-top .response-code,
+.show .main-top .response-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home .main-top .url-form,
+.show .main-top .url-form {
+  display: flex;
+  padding: 8px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+}
+
+.home .main-top .url-form #url-input,
+.show .main-top .url-form #url-input {
+  flex-grow: 1;
+  margin: 0px 8px;
+}
+
+.home .main-top .url-form #send-btn,
+.show .main-top .url-form #send-btn {
+  color: #fff;
+  background-color: #598cff;
+}
+
+.home .main-bottom,
+.show .main-bottom {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+.home .main-bottom .card,
+.show .main-bottom .card {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.home .main-bottom .card > div,
+.show .main-bottom .card > div {
+  position: relative;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 2px;
+}
+
+.home .main-bottom .card > div .label,
+.show .main-bottom .card > div .label {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 12px;
+}
+
+.home .main-bottom .card > div > span,
+.show .main-bottom .card > div > span {
+  display: block;
+}
+
+.home .main-bottom .card > span,
+.show .main-bottom .card > span {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.home .main-bottom .card.url-info,
+.show .main-bottom .card.url-info {
+  background-color: #dee2e6;
+}
+
+.home .main-bottom .card.url-info > div,
+.show .main-bottom .card.url-info > div {
+  background-color: #ced4da;
+  padding-top: 24px;
+}
+
+.home .request-link,
+.show .request-link {
+  margin: 30px 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .home,
+  .show {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .home .main-bottom,
+  .show .main-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home,
+  .show {
+    width: 60%;
+  }
+
+  .home .main-top,
+  .show .main-top {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home,
+  .show {
+    width: 60%;
+  }
+
+  .home .main-bottom,
+  .show .main-bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

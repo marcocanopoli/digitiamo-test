@@ -74,7 +74,7 @@
 
 <script>
 export default {
-    name: 'VHome',
+    name: 'PageHome',
     data() {
         return {
             method: 'get',
@@ -90,126 +90,5 @@ export default {
 </script>
 
 <style lang="scss">
-
-    @import '../../sass/front/_variables.scss';
-    @import '../../sass/front/_mixins.scss';
-
-    .home {
-        height: 100%;
-
-        .main-top {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 30px;
-            height: 50%;
-
-            .response-code {
-                @include flex-center;
-                flex-direction: column;
-                height: 100%;
-            }
-
-            .url-form {
-                display: flex;
-                padding: 8px;
-                background-color: $gray-200;
-                border-radius: 8px;
-                
-                #url-input {
-                    flex-grow: 1;
-                    margin: 0px 8px;
-                }
-
-                #send-btn {
-                    color: $white;
-                    background-color: $blue;
-                }
-            }
-        }
-
-        .main-bottom {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 15px;
-            
-            .card {
-                padding: 8px;
-                border-radius: 8px;
-                background-color: $gray-100;
-                border: 1px solid $gray-200;
-
-                & > div {
-                    position: relative;
-                    padding: 8px 8px 8px 8px;
-                    margin-bottom: 2px;
-
-                    .label {
-                        position: absolute;
-                        top: 4px;
-                        left: 4px;
-                        font-size: 12px;
-                    }
-
-                    & > span {
-                        display: block;
-                    }
-                }                
-
-                & > span {
-                    display: block;
-                    margin-bottom: 16px;
-                }
-
-                &.url-info {
-                    background-color: $gray-300;
-
-                    & > div {
-                        background-color: $gray-400;
-                        padding-top: 24px;
-                    }
-                }
-            }
-
-        }
-
-        .request-link {
-            margin: 30px 0;
-            text-align: center;
-        }
-    }
-
-    @media screen and (min-width: 576px) {
-        .home {
-            width: 80%;
-            margin: 0 auto;
-
-            .main-bottom {                
-                grid-template-columns: repeat(2, 1fr);
-
-            }
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        .home {
-            width: 60%;
-
-            .main-top {
-                flex-direction: column-reverse;
-            }
-        }
-    }
-
-    @media screen and (min-width: 992px) {
-        .home {
-            width: 60%;
-
-            .main-bottom {
-                grid-template-columns: repeat(3, 1fr);
-
-            }
-        }
-    }
-
 
 </style>

@@ -27,5 +27,5 @@ Route::middleware('auth') //autenticazione
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get("{any?}", "HomeController@index")->where("any", ".*");
+Route::get("{any?}", "HomeController@index")->where("any", ".*")->name('home');
 

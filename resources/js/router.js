@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import VHome from './views/VHome.vue';
+import PageHome from './views/PageHome.vue';
+import PageRequest from './views/PageRequest.vue';
 
 Vue.use(VueRouter);
 
@@ -13,8 +14,14 @@ const router = new VueRouter({
             path: '/',
             alias: '/home',
             name: 'home',
-            component: VHome
-        },        
+            component: PageHome
+        },
+        {
+            path: '/:request_id',
+            name: 'show',
+            component: PageRequest
+        },
+               
         // {
         //     path: '*',
         //     name: 'not-found',

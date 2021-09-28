@@ -19,8 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('Api')->group(function() {        
-    Route::get('HTTP/get/', 'HTTPController@get');
-    Route::post('HTTP/post/', 'HTTPController@post');
-    Route::put('HTTP/put/', 'HTTPController@put');
-    Route::delete('HTTP/delete/', 'HTTPController@delete');
+    Route::get('HTTP/get', 'HTTPController@get');
+    Route::post('HTTP/post', 'HTTPController@post');
+    Route::put('HTTP/put', 'HTTPController@put');
+    Route::delete('HTTP/delete', 'HTTPController@delete');
 });
