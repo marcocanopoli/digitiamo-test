@@ -80,7 +80,7 @@ class HTTPController extends Controller
         $new->save();       
         
         $response = [
-            'request_id' => $new->requestID,
+            'request_id' => $new->request_id,
             'status' => '200 OK'
         ];
 
@@ -100,7 +100,7 @@ class HTTPController extends Controller
         } else {
             $response['status'] = '404 Not Found';
         }
-        
+
         return response()->json($response);
     }
 }

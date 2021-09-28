@@ -5,7 +5,7 @@
 
             <!-- URL form -->
             <div class="url-form">
-                <span class="btn">{{ this.request.method }}</span>
+                <span class="btn">{{ this.request.method.toUpperCase() }}</span>
                 <input type="text" size="10" id="url-input" :value="foundRequest.url">                         
             </div>
             <!-- /URL form -->
